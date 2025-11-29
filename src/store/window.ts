@@ -1,16 +1,26 @@
 import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "#constants";
 import { immer } from "zustand/middleware/immer";
 import { create } from "zustand";
+import type { ActiveLocationWithExtras } from "./location";
 
 export type WindowKey = keyof typeof WINDOW_CONFIG;
 
+type WindowValue = {
+  isOpen: boolean;
+  zIndex: number;
+  data: ActiveLocationWithExtras | null;
+};
+
 type WindowStoreState = {
-  windows: typeof WINDOW_CONFIG;
+  windows: Record<WindowKey, WindowValue>;
   nextZIndex: number;
 };
 
 type WindowStoreActions = {
-  openWindow: (windowKey: WindowKey) => void;
+  openWindow: (
+    windowKey: WindowKey,
+    data?: ActiveLocationWithExtras | null
+  ) => void;
   closeWindow: (windowKey: WindowKey) => void;
   focusWindow: (windowKey: WindowKey) => void;
 };
