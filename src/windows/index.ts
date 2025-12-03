@@ -1,9 +1,19 @@
-import Terminal from "./Terminal";
-import Safari from "./Safari";
-import Resume from "./Resume";
-import Finder from "./Finder";
-import Text from "./Text";
-import Image from "./Image";
-import Contact from "./Contact";
+import TerminalWindow from "./Terminal";
+import SafariWindow from "./Safari";
+import ResumeWindow from "./Resume";
+import FinderWindow from "./Finder";
+import TextWindow from "./Text";
+import ImageWindow from "./Image";
+import ContactWindow from "./Contact";
+import PhotosWindow from "./Photos";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact };
+export {
+  TerminalWindow,
+  SafariWindow,
+  ResumeWindow,
+  FinderWindow,
+  TextWindow,
+  ImageWindow,
+  ContactWindow,
+  PhotosWindow,
+};

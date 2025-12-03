@@ -1,13 +1,5 @@
-import { Dock, Navbar, Welcome } from "#components";
-import {
-  Contact,
-  Finder,
-  Image,
-  Resume,
-  Safari,
-  Terminal,
-  Text,
-} from "#windows";
+import { Dock, Home, Navbar, WelcomeText } from "#components";
+import { WindowTabs } from "#components";
 import gsap from "gsap";
 
 import { Draggable } from "gsap/Draggable";
@@ -15,19 +7,18 @@ gsap.registerPlugin(Draggable);
 
 const App = () => {
   return (
-    <main>
+    <div className="w-dvw h-dvh overflow-hidden flex flex-col">
       <Navbar />
-      <Welcome />
-      <Dock />
 
-      <Terminal />
-      <Safari />
-      <Resume />
-      <Finder />
-      <Text />
-      <Image />
-      <Contact />
-    </main>
+      <main className="flex-1 relative">
+        <WelcomeText />
+        <Home />
+
+        <WindowTabs />
+      </main>
+
+      <Dock />
+    </div>
   );
 };
 export default App;

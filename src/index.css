@@ -31,42 +31,12 @@ body {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-@layer base {
-  main {
-    @apply w-dvw h-dvh overflow-hidden;
-  }
-
-  nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
-
-    div {
-      @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
-
-      &:last-child {
-        @apply max-sm:hidden;
-      }
-    }
-
-    ul {
-      @apply flex items-center gap-5 max-sm:hidden;
-
-      p {
-        @apply text-sm cursor-pointer hover:underline transition-all;
-      }
-    }
-
-    time {
-      @apply text-sm font-medium text-black;
-    }
-  }
-}
-
 @layer components {
-  .icon {
+  /* .icon {
     @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
-  }
+  } */
 
-  #welcome {
+  /* #welcome {
     @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
 
     .small-screen {
@@ -76,7 +46,7 @@ body {
         @apply flex-1 text-[16px] text-center font-roboto text-gray-400;
       }
     }
-  }
+  } */
 
   #dock {
     @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
@@ -98,7 +68,7 @@ body {
     }
   }
 
-  #window-controls {
+  /* #window-controls {
     @apply flex gap-2;
 
     .close {
@@ -112,7 +82,7 @@ body {
     .maximize {
       @apply size-3.5 rounded-full bg-[#2acb42];
     }
-  }
+  } */
 
   #window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
@@ -306,8 +276,8 @@ body {
     }
   }
 
-  #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+  /* #finder {
+    @apply absolute w-3xl left-0 top-0 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 
     .sidebar {
       @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
@@ -348,7 +318,7 @@ body {
         }
       }
     }
-  }
+  } */
 
   #txtfile {
     @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;

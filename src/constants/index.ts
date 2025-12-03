@@ -40,39 +40,34 @@ const dockApps = [
     id: "finder",
     name: "Portfolio", // was "Finder"
     icon: "finder.png",
-    canOpen: true,
   },
   {
     id: "safari",
     name: "Articles", // was "Safari"
     icon: "safari.png",
-    canOpen: true,
   },
   {
     id: "photos",
     name: "Gallery", // was "Photos"
     icon: "photos.png",
-    canOpen: true,
   },
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
     icon: "contact.png",
-    canOpen: true,
   },
   {
     id: "terminal",
     name: "Skills", // was "Terminal"
     icon: "terminal.png",
-    canOpen: true,
   },
-  {
-    id: "trash",
-    name: "Archive", // was "Trash"
-    icon: "trash.png",
-    canOpen: false,
-  },
-];
+  // {
+  //   id: "trash",
+  //   name: "Archive", // was "Trash"
+  //   icon: "trash.png",
+  //   canOpen: false,
+  // },
+] as const;
 
 const blogPosts = [
   {
@@ -228,8 +223,8 @@ const WORK_LOCATION = {
       name: "Nike Ecommerce Website Application",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
+      // position: "top-10 left-5", // icon position inside Finder
+      windowPosition: "top-[5vh] right-5", // optional: Finder window position
       children: [
         {
           id: 1,
@@ -281,8 +276,8 @@ const WORK_LOCATION = {
       name: "AI Resume Analyzer",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
+      // position: "top-10 left-15",
+      windowPosition: "top-[20vh] right-7",
       children: [
         {
           id: 1,
@@ -334,8 +329,8 @@ const WORK_LOCATION = {
       name: "Food Delivery App",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
+      // position: "top-10 left-80",
+      windowPosition: "top-[35vh] right-7",
       children: [
         {
           id: 1,
@@ -494,7 +489,7 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: { isOpen: true, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
